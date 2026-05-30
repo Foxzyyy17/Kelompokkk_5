@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUKA - Platform Belajar Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-inner">
+          <div class="logo">
+            <h2>🧠 EDUKA</h2>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="active">Beranda</a></li>
+            <li><a href="matematika.html">Matematika</a></li>
+            <li><a href="sains.html">Sains</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <h1>Selamat Datang di EDUKA</h1>
+          <p>Platform belajar online terbaik untuk masa depan cerahmu</p>
+          <div class="cta-buttons">
+            <a href="matematika.html" class="btn btn-secondary"
+              >Pelajari Matematika</a>
+              <a href="daftar.html" class="btn btn-primary">Daftar</a>
+            <a href="sains.html" class="btn btn-secondary">Pelajari Sains</a>
+          </div>
+        </div>
+      </section>
+      <!-- Tabel Siswa Terdaftar -->
+      <section class="table-section">
+        <div class="container">
+          <h2>📊 Siswa Terdaftar</h2>
+          <div class="table-container">
+            <table class="students-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Email</th>
+                  <th>Kelas</th>
+                  <th>Status</th>
+                  <th>Tanggal Daftar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong>Asep Santoso</strong></td>
+                  <td>asep@email.com</td>
+                  <td>5A</td>
+                  <td><span class="status active">✅ Aktif</span></td>
+                  <td>01 Des 2025</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><strong>Budi Seregar</strong></td>
+                  <td>budi@email.com</td>
+                  <td>6B</td>
+                  <td><span class="status active">✅ Aktif</span></td>
+                  <td>21 Sep 2025</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><strong>Agus Samsuddin</strong></td>
+                  <td>agus@email.com</td>
+                  <td>5C</td>
+                  <td><span class="status pending">⏳ Menunggu</span></td>
+                  <td>07 Feb 2025</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><strong>Bahlil Agung</strong></td>
+                  <td>bahlil@email.com</td>
+                  <td>6A</td>
+                  <td><span class="status active">✅ Aktif</span></td>
+                  <td>18 Jan 2026</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><strong>Robby Panjoro</strong></td>
+                  <td>robby@email.com</td>
+                  <td>4B</td>
+                  <td><span class="status active">✅ Aktif</span></td>
+                  <td>22 Apr 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-stats">
+            <span class="stat-item">Total Siswa: <strong>1,247</strong></span>
+            <span class="stat-item">Aktif: <strong>1,150</strong></span>
+          </div>
+        </div>
+      </section>
+
+          <div class="form-info">
+            <p>
+              ✅ <strong>Pendaftaran 100% Gratis</strong> | 📱 Dapatkan akses
+              materi lengkap | 🎓 Sertifikat resmi
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <h2>✨ Fitur Unggulan</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">📚</div>
+              <h3>Materi Lengkap</h3>
+              <p>500+ materi video & PDF dari guru terbaik</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">✅</div>
+              <h3>Quiz Interaktif</h3>
+              <p>1000+ soal latihan dengan penjelasan lengkap</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Sertifikat</h3>
+              <p>Sertifikat digital yang diakui sekolah</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 EDUKA. Hak Cipta Dilindungi. | Total Siswa:
+          <strong>1,247</strong> | Siswa Aktif: <strong>1,150</strong>
+        </p>
+      </div>
+    </footer>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navMenu.classList.toggle('open');
+      });
+      navMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          hamburger.classList.remove('open');
+          navMenu.classList.remove('open');
+        });
+      });
+    </script>
+  </body>
+</html>

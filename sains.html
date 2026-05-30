@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sains - EDUKA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-inner">
+          <div class="logo">
+            <h2>🧠 EDUKA</h2>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="matematika.html">Matematika</a></li>
+            <li><a href="sains.html" class="active">Sains</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Sains</h1>
+          <p>Telusuri keajaiban dunia sains dan alam semesta</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="lesson-grid">
+            <div class="lesson-card">
+              <h3>Tata Surya</h3>
+              <p>Matahari, 8 planet, asteroid, komet</p>
+              <a href="#" class="btn btn-primary">Mulai Belajar</a>
+            </div>
+            <div class="lesson-card">
+              <h3>Energi & Gaya</h3>
+              <p>Gaya gravitasi, energi kinetik, potensial</p>
+              <a href="#" class="btn btn-primary">Mulai Belajar</a>
+            </div>
+            <div class="lesson-card">
+              <h3>Ekologi</h3>
+              <p>Rantai makanan, ekosistem, daur ulang</p>
+              <a href="#" class="btn btn-primary">Mulai Belajar</a>
+            </div>
+          </div>
+
+          <div class="quiz-section">
+            <h2>Quiz Cepat</h2>
+            <div class="quiz">
+              <p>Planet terdekat dengan matahari adalah?</p>
+              <div class="quiz-options">
+                <label><input type="radio" name="q2" /> Mars</label>
+                <label><input type="radio" name="q2" /> Venus</label>
+                <label><input type="radio" name="q2" /> Merkurius</label>
+              </div>
+              <button class="btn btn-success">Cek Jawaban</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 EDUKA. Hak Cipta Dilindungi.</p>
+      </div>
+    </footer>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navMenu.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
